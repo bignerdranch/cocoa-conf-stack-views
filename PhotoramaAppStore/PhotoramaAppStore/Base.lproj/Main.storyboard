@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xaU-qi-W9s">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--App Store-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoramaAppStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zm7-v2-Giz">
+                                <rect key="frame" x="20" y="72" width="560" height="528"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CgH-yc-MAD">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="PhotoramaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cMI-ih-CdH">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3C6-VI-Qg5">
+                                                <rect key="frame" x="68" y="0.0" width="334" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photorama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayy-Ir-cIr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big Nerd Ranch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jp-PH-q3O">
+                                                        <rect key="frame" x="0.0" y="30" width="334" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-ir-Tj0">
+                                                <rect key="frame" x="410" y="0.0" width="150" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="ovp-xJ-Edh"/>
+                                                </constraints>
+                                                <state key="normal" title="Buy"/>
+                                                <connections>
+                                                    <action selector="buyApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O3-SI-lX2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-Nx-DGV">
+                                        <rect key="frame" x="0.0" y="68" width="560" height="29"/>
+                                        <segments>
+                                            <segment title="Screen shots"/>
+                                            <segment title="Description"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qdU-5y-LAf"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CiI-Vv-86E">
+                                        <rect key="frame" x="0.0" y="104" width="560" height="424"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLn-j1-n2i">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="387"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4T-ym-Jae">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1495" height="387"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot1" translatesAutoresizingMaskIntoConstraints="NO" id="tTG-eI-MDy">
+                                                                <rect key="frame" x="0.0" y="0.0" width="560" height="387"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot2" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-S8-ZKd">
+                                                                <rect key="frame" x="560" y="0.0" width="560" height="387"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot3" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-4V-023">
+                                                                <rect key="frame" x="1120" y="0.0" width="375" height="387"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="I9A-S8-ZKd" firstAttribute="width" secondItem="nLn-j1-n2i" secondAttribute="width" id="Dpd-Sq-N82"/>
+                                                    <constraint firstItem="I9A-S8-ZKd" firstAttribute="height" secondItem="nLn-j1-n2i" secondAttribute="height" id="H6q-eu-2Ms"/>
+                                                    <constraint firstAttribute="trailing" secondItem="r4T-ym-Jae" secondAttribute="trailing" id="LcV-CC-4Bw"/>
+                                                    <constraint firstItem="tTG-eI-MDy" firstAttribute="height" secondItem="nLn-j1-n2i" secondAttribute="height" id="YeP-uO-LwP"/>
+                                                    <constraint firstItem="r4T-ym-Jae" firstAttribute="leading" secondItem="nLn-j1-n2i" secondAttribute="leading" id="aOD-zf-8yq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="r4T-ym-Jae" secondAttribute="bottom" id="mgA-zT-Y5D"/>
+                                                    <constraint firstItem="tTG-eI-MDy" firstAttribute="width" secondItem="nLn-j1-n2i" secondAttribute="width" id="qk4-h3-c1K"/>
+                                                    <constraint firstItem="r4T-ym-Jae" firstAttribute="top" secondItem="nLn-j1-n2i" secondAttribute="top" id="xLf-0a-LTX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pxN-3h-Ie0"/>
+                                                </connections>
+                                            </scrollView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8xI-Zc-63J">
+                                                <rect key="frame" x="0.0" y="387" width="560" height="37"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.174040366" green="0.51120962839999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </pageControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zm7-v2-Giz" secondAttribute="bottom" id="3gl-Ug-NQK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zm7-v2-Giz" secondAttribute="trailing" id="dy9-Vf-dHO"/>
+                            <constraint firstItem="zm7-v2-Giz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ghI-YA-go7"/>
+                            <constraint firstItem="zm7-v2-Giz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="h2Y-cU-j2t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="App Store" id="cVC-zU-6lk"/>
+                    <connections>
+                        <outlet property="descriptionView" destination="7bb-lx-cEb" id="jXo-Ym-LVv"/>
+                        <outlet property="outerStackView" destination="zm7-v2-Giz" id="c6I-wA-hRN"/>
+                        <outlet property="pageControl" destination="8xI-Zc-63J" id="tWp-Aw-EHg"/>
+                        <outlet property="screenshotStackView" destination="r4T-ym-Jae" id="wyQ-Us-HY6"/>
+                        <outlet property="screenshotView" destination="CiI-Vv-86E" id="h1T-kf-Ogm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="7bb-lx-cEb">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </objects>
+            <point key="canvasLocation" x="1018" y="1094"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H30-8D-zFd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xaU-qi-W9s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvv-Z9-BQL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AKZ-Y2-yIT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1R-Jf-JpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="1089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PhotoramaIcon" width="60" height="60"/>
+        <image name="Screenshot1" width="375" height="667"/>
+        <image name="Screenshot2" width="749" height="1320"/>
+        <image name="Screenshot3" width="375" height="667"/>
+    </resources>
+</document>
